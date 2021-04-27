@@ -1,0 +1,220 @@
+/* Général */
+body{
+    margin: 2em;
+    word-wrap: break-word;
+}
+
+h4, h3, h2, h6, p, a, figcaption{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+
+/* Section 1 Hébergements */
+
+.hebergements{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.boiteHebergement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+    background-color: #f2f2f2;
+    padding: 2em;
+    height: max-content;
+    border-radius: 20px;
+    margin-right: 1em;
+}
+
+.titreSection{
+    margin: 0.5em;
+}
+
+#boiteSelection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.boiteHotel{
+    height: 15%;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px #f2f2f2;
+    overflow: hidden; /*pour que l'image soit bien dans le bloc*/
+    margin: 0.5em;
+    background-color: white;
+    border: solid 3px white;
+}
+
+.photoHotel{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.texteHotel{
+    padding: 0.5em;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
+}
+
+h6{
+    margin: 3%;
+}
+
+.tarif{
+    font-size: small;
+    margin: 3%
+}
+
+.afficherPlus{
+    margin: 0.5em;
+}
+
+/* Aside - Les plus populaires */
+
+.boitePopulaire{
+    display: flex;
+    background-color: #f2f2f2;
+    width: 35%;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1em;
+}
+
+.titrePopulaire{
+}
+
+.boiteHotelPopulaire{
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestionPopulaire{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 3px white;
+    overflow: hidden;
+    height: 150px;
+    width: auto; 
+    margin: 0.5em;    
+}
+
+.imagePopulaire{
+    display: flex;
+    width: 43%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.descriptionLogementPopulaire{
+    display: flex;
+    flex-direction:column;
+    justify-content:right;
+    width: 53%;
+}
+
+.photoHotelPop{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Section 2 Activités à Marseille */
+
+h3{    
+}
+
+#activite{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#selectionActivites{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 520px;
+}
+
+.grandeActivite{
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px grey;
+    overflow: hidden;
+    width: 22%;
+    background-color: white;
+    height: 500px;
+}
+
+.photoGrandeActivité{
+    height: 456px;
+}
+
+.photoPetiteActivité{
+    width: 100%;
+    height: 188px;
+    object-fit: cover;
+}
+
+.petiteActivite{
+    flex-direction: column;
+    width: 22%;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.boitePetiteActivite{
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px grey;
+    overflow: hidden;
+    margin-bottom: 2em;
+    background-color: white;
+    height: 235px;
+}
+
+figcaption{
+    margin: 1em;
+    font: medium 0.5em;
+    font-size: small;
+    font-weight:600;
+    overflow: auto;
+    justify-content: left;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;   
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+    
+.liensFooter{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
