@@ -1,7 +1,7 @@
 /* Général */
 
 body {
-    margin: 2em;
+    margin: 0 2em 2em 2em;
     word-wrap: break-word;
     text-decoration: none;
 }
@@ -25,7 +25,7 @@ form {
 /* Header */
 
 header {
-    height: 370px;
+    height: 380px;
     width: 100%;
 }
 
@@ -38,13 +38,14 @@ nav {
 .top {
     display: flex;
     justify-content: space-between;
-}
-
-.height60px {
     height: 60px;
 }
 
-.ReserviaBleu {
+.logoTop {
+    margin-top: 0.5em;
+}
+
+.height40px {
     height: 40px;
 }
 
@@ -70,7 +71,7 @@ header .bandeauAncres a:before {
     /* https://stackoverflow.com/questions/28623446/hover-effect-expand-bottom-border/28623513#28623513*/
     display: block;
     content: '';
-    border-top: solid 0.5px #0065FC;
+    border-top: solid 3px #0065FC;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     padding-top: 20px;
@@ -88,7 +89,7 @@ h5 {
     font-size: large;
 }
 
-.champsSaisie {
+.inputField {
     display: flex;
     height: 70px;
     width: 500px;
@@ -96,7 +97,7 @@ h5 {
     justify-content: flex-start;
 }
 
-.champsSaisie i {
+.inputField i {
     border-radius: 20px 0 0 20px;
     border: none;
     padding: 1em;
@@ -105,7 +106,7 @@ h5 {
     background-color: #f2f2f2;
 }
 
-.champsSaisie input {
+.inputField input {
     display: flex;
     border: none;
     align-items: center;
@@ -114,7 +115,7 @@ h5 {
     font-weight: bold;
 }
 
-.champsSaisie button {
+.inputField button {
     border-radius: 0 20px 20px 0;
     background-color: #0065FC;
     border: none;
@@ -127,16 +128,15 @@ h5 {
 
 /* Filtres */
 
-.filtres {
+.filters {
     font-weight: bold;
 }
 
-.filtres p {
+.filters p {
     margin-right: 2em;
-    padding: auto;
 }
 
-.filtres form {
+.filters form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -145,7 +145,7 @@ h5 {
     max-width: 80%;
 }
 
-.boiteOvale {
+.checkBox {
     width: auto;
     height: 2em;
     border-radius: 20px;
@@ -161,21 +161,17 @@ h5 {
 
 /* Dézoomer */
 
-.zoom-filtres {
-    -webkit-transform: scale(1.25);
+.zoomEnlarge {
     transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
-.zoom-filtres:hover {
-    -webkit-transform: scale(1);
+.zoomEnlarge:hover {
     transform: scale(1.1);
 }
 
-.visually-hidden {
+.visuallyHidden {
     border: 0;
-    clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -184,17 +180,17 @@ h5 {
     width: 1px;
 }
 
-.pastille {
+.chip {
     display: inline-flex;
     align-items: center;
 }
 
-.pastille:hover {
+.chip:hover {
     color: #0065FC;
     background-position: 0%;
 }
 
-.pastille__indicator {
+.chipIndicator {
     margin-right: .25rem;
     width: 2em;
     height: 2em;
@@ -202,39 +198,35 @@ h5 {
     border-radius: 50%;
 }
 
-.pastille .eco {
+.chip .eco {
     background-image: url("images/logo/money-bill-wave-solid.svg");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
-    fill: #0065FC;
 }
 
-.pastille .famille {
+.chip .family {
     background-image: url("images/logo/child-solid.svg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    fill: #0065FC;
 }
 
-.pastille .romantique {
+.chip .love {
     background-image: url("images/logo/heart-solid.svg");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
-    fill: #0065FC;
 }
 
-.pastille .animaux {
+.chip .pets {
     background-image: url("images/logo/dog-solid.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
-    fill: #0065FC;
 }
 
-.pastille__input:checked~.pastille__indicator {
+.chipInput:checked~.chipIndicator {
     background-color: #0065FC;
     background-image: url("images/logo/check-circle-solid.svg");
     background-size: 85%;
@@ -243,11 +235,11 @@ h5 {
     border: none;
 }
 
-.pastille__input:checked+pastille:before {
+.chipInput:checked+chip:before {
     background: #0065FC;
 }
 
-.pastille__input:checked+pastille:after {
+.chipInput:checked+chip:after {
     background: #DEEBFF;
     top: 2px;
     left: 140px;
@@ -256,7 +248,7 @@ h5 {
 
 /*  résultat recherche */
 
-.iRond {
+.info {
     margin-right: 10px;
     width: 25px;
     background: #f2f2f2;
@@ -268,7 +260,7 @@ h5 {
     justify-content: center;
 }
 
-.iRond p {
+.info p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     color: #0065FC;
@@ -284,32 +276,32 @@ h5 {
 
 /* Section 1 Hébergements */
 
-.hebergements {
+.twoSections {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 650px;
 }
 
-.boiteHebergement {
+.containerSectionOne {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 65%;
     background-color: #f2f2f2;
-    padding: 2em;
-    height: max-content;
+    padding: 1.5em;
+    height: 560px;
     border-radius: 20px;
-    margin-right: 1em;
+    margin-right: 2em;
 }
 
-.titreSection {
+.containerSectionOne h2 {
     margin: 0.5em;
 }
 
-#boiteSelection {
+#cardContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -317,7 +309,7 @@ h5 {
     align-content: space-between;
 }
 
-.boiteHotel {
+.cardPictureTop {
     height: 200px;
     width: 30%;
     border-radius: 10px;
@@ -325,119 +317,122 @@ h5 {
     overflow: hidden;
     /*pour que l'image soit bien dans le bloc*/
     margin: 0.5em;
-    background-color: white;
     border: solid 3px white;
 }
 
 
 /* Dézoomer */
 
-.zoom-out {
-    -webkit-transform: scale(1.25);
+.zoomOut {
     transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
-.zoom-out:hover {
-    -webkit-transform: scale(1);
+.zoomOut:hover {
     transform: scale(0.9);
 }
 
 
-/* rendre div hebergements, hebergement populaire et activité  clickables */
+/* rendre div twoSections, hebergement populaire et activité  clickables */
 
-section article .boiteSelection .boiteHotel a,
-aside .boiteHotelPopulaire .suggestionPopulaire a {
+section article #cardContainer .boiteHotel a,
+aside .containerBox .cardPictureSide a {
     display: block;
 }
 
-.photoHotel {
+.cardPictureTop img {
     width: 100%;
-    height: 60%;
+    height: 117px;
     object-fit: cover;
 }
 
-.texteHotel {
+.text {
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: left;
-    align-items: center;
     flex-wrap: wrap;
-    height: 40%;
-    padding: 0em 0.5em;
+    height: 74px;
+    padding: 0.5em 0.5em;
+    width: auto;
 }
 
 h6 {
     font-size: 0.8em;
-    margin: 0.5em 0.5em 0em 0.5em;
+    padding: 0;
+    margin: 0;
 }
 
-.tarif {
+.text div p {
     font-size: small;
-    margin: 0.5em;
 }
 
-.afficherPlus {
+.containerSectionOne h5 {
     margin: 0.5em;
 }
 
 
 /* Aside - Les plus populaires */
 
-.boitePopulaire {
+.containerSectionTwo {
     display: flex;
     background-color: #f2f2f2;
     width: 35%;
+    height: 560px;
     flex-direction: column;
     border-radius: 20px;
-    padding: 1em;
+    padding: 1.5em;
 }
 
-.boiteHotelPopulaire {
+.containerBox {
     display: flex;
     flex-direction: column;
 }
 
-.titrePopulaire {
+.containerSectionTwoTitle {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.containerSectionTwoTitle h2 {
+    margin: 0.5em 0;
 }
 
 .pictoIncrease {
     text-decoration: none;
 }
 
-.boiteHotelPopulaire {
+.containerBox {
     display: flex;
     flex-direction: column;
 }
 
-.suggestionPopulaire {
+.cardPictureSide {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: white;
     border-radius: 10px;
     border: solid 3px white;
     overflow: hidden;
     height: 150px;
     width: auto;
-    margin: 0.5em;
+    margin: 0.5em 0;
 }
 
-.imagePopulaire {
+.pictureSide {
     display: flex;
     width: 43%;
     height: 150px;
     object-fit: cover;
 }
 
-.descriptionLogementPopulaire {
+.textSide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -446,18 +441,18 @@ h6 {
     height: 150px;
 }
 
-.descriptionLogementPopulaire .tarif {
+.textSide div p {
     line-height: 3em;
 }
 
-.photoHotelPop {
+.pictureSide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
 }
 
-.etoiles {
+.stars {
     color: #0065FC;
 }
 
@@ -472,12 +467,12 @@ h6 {
     height: auto;
 }
 
-#selectionActivites {
+#BoxesInStrip {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 520px;
+    height: 560px;
     padding: 0;
 }
 
@@ -485,7 +480,7 @@ li {
     list-style: none;
 }
 
-.grandeActivite {
+.bigBox {
     border-radius: 10px;
     box-shadow: 20px 20px 30px grey;
     overflow: hidden;
@@ -493,22 +488,23 @@ li {
     background-color: white;
     height: 500px;
     padding: 0;
+    margin: 0;
 }
 
-.photoGrandeActivité {
+.bigBox img {
     height: 450px;
     object-fit: cover;
     overflow: hidden;
 }
 
-.photoPetiteActivité {
+.littleBox img {
     width: 100%;
     height: 182px;
     object-fit: cover;
     overflow: hidden;
 }
 
-.petiteActivite {
+.boxOfTwo {
     flex-direction: column;
     width: 22%;
     justify-content: space-between;
@@ -517,11 +513,11 @@ li {
     padding: 0;
 }
 
-.boitePetiteActivite {
+.littleBox {
     border-radius: 10px;
     box-shadow: 20px 20px 30px grey;
     overflow: hidden;
-    margin-bottom: 2em;
+    margin-bottom: 1.85em;
     background-color: white;
     height: 235px;
 }
@@ -531,7 +527,7 @@ li {
     font-weight: 600;
     overflow: auto;
     justify-content: flex-start;
-    padding: 3%;
+    padding: 0.5em 0.5em;
     display: table-cell;
     height: auto;
     width: 90%;
@@ -578,19 +574,22 @@ footer a:hover {
     body {
         margin: 1em;
     }
+    header {
+        height: 470px;
+    }
     .bandeauAncres {
         width: 45%;
     }
-    .champsSaisie {
+    .inputField {
         width: 100%;
         justify-content: center;
         margin: 2em 0;
     }
-    .filtres form {
+    .filters form {
         max-width: 90%;
         margin: 0 1em 1em;
     }
-    .hebergements {
+    .twoSections {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -598,7 +597,7 @@ footer a:hover {
         width: 100%;
         height: auto;
     }
-    .boiteHebergement {
+    .containerSectionOne {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -606,13 +605,13 @@ footer a:hover {
         padding: 0em;
         height: max-content;
         border-radius: 0;
-        margin: 10em 0em 3em 0;
+        margin: 0 0em 3em 0;
         width: auto;
     }
-    .boiteHebergement h2 {
+    .containerSectionOne h2 {
         padding: 0 7em;
     }
-    #boiteSelection {
+    #cardContainer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -621,20 +620,17 @@ footer a:hover {
         width: auto;
         padding: 1em;
     }
-    .boiteHotel {
+    .cardPictureTop {
         height: 205px;
         width: 45%;
         border-radius: 10px;
         box-shadow: 10px 10px 30px grey;
         overflow: hidden;
-        background-color: white;
         border: solid 3px white;
         margin: 0.5em 0 0.5em 0;
     }
-    .hebergements aside {
+    .containerSectionTwo {
         width: auto;
-    }
-    .boitePopulaire {
         display: flex;
         background-color: #f2f2f2;
         height: 615px;
@@ -643,13 +639,13 @@ footer a:hover {
         padding: 0;
         margin-bottom: 2em;
     }
-    .titrePopulaire {
+    .containerSectionTwoTitle {
         justify-content: space-around;
     }
-    .titrePopulaire h2 {
+    .containerSectionTwo h2 {
         padding: 1em 0 0 3em;
     }
-    .afficherPlus h5 {
+    .containerSectionOne h5 {
         margin: 0 2em 1em 80%;
         justify-content: flex-end;
     }
@@ -696,6 +692,9 @@ footer a:hover {
         font-family: 'Raleway', sans-serif;
         color: black;
     }
+    h2 {
+        padding-left: 0.6em;
+    }
     h3 {
         font-size: 3.5vh;
         padding-bottom: 1vh;
@@ -736,12 +735,12 @@ footer a:hover {
         transition: none;
         padding-top: 20px;
     }
-    .categorieH {
+    .navHebergement {
         position: absolute;
         top: 0%;
         left: 27%;
     }
-    .border50widthEcranH {
+    .navHebergementResponsive {
         position: absolute;
         left: -16px;
         border-bottom: none;
@@ -749,15 +748,15 @@ footer a:hover {
         margin-left: 0;
         padding-bottom: 48px;
     }
-    .border50widthEcranH:active {
+    .navHebergementResponsive:active {
         border-bottom: solid 4px #0065FC;
     }
-    .categorieA {
+    .navActivite {
         position: absolute;
         top: 0px;
         right: 34%;
     }
-    .border50widthEcranA {
+    .navActiviteResponsive {
         position: absolute;
         right: -16px;
         border-bottom: none;
@@ -765,7 +764,7 @@ footer a:hover {
         margin-right: 0;
         padding-bottom: 48px;
     }
-    .border50widthEcranA:active {
+    .navActiviteResponsive:active {
         border-bottom: solid 4px #0065FC;
     }
     .sinscrire {
@@ -780,7 +779,7 @@ footer a:hover {
         text-decoration: none;
     }
     /* champ saisie de recherche */
-    .texteHeader {
+    .intro {
         width: 90%;
         margin: auto;
     }
@@ -789,11 +788,11 @@ footer a:hover {
         margin-top: 40px;
         padding: 0;
     }
-    .texteHeader p {
+    .intro p {
         font-size: large;
         margin-bottom: 2em;
     }
-    .champsSaisie {
+    .inputField {
         display: flex;
         height: 75px;
         width: 90%;
@@ -802,7 +801,7 @@ footer a:hover {
         justify-content: center;
         align-items: stretch;
     }
-    .champsSaisie i {
+    .inputField i {
         border-radius: 12px 0 0 12px;
         border: none;
         padding: 0.8em;
@@ -811,7 +810,7 @@ footer a:hover {
         font-weight: bold;
         background-color: #f2f2f2;
     }
-    .champsSaisie input {
+    .inputField input {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -822,7 +821,7 @@ footer a:hover {
         height: 40px;
         width: 109%;
     }
-    .champsSaisie button {
+    .inputField button {
         border-radius: 12px;
         background-color: #0065FC;
         background-image: url('images/logo/search-solid.svg');
@@ -833,7 +832,6 @@ footer a:hover {
         border: none;
         height: 40px;
         width: 40px;
-        color: #0065FC;
         font-family: 'Raleway', sans-serif;
         font-weight: bold;
     }
@@ -841,15 +839,15 @@ footer a:hover {
         display: none;
     }
     /* Filtres */
-    .filtres {
+    .filters {
         font-weight: bold;
     }
-    .filtres p {
+    .filters p {
         width: 95%;
         margin: auto;
         margin-bottom: 1em;
     }
-    .filtres form {
+    .filters form {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -858,7 +856,7 @@ footer a:hover {
         width: 100%;
         margin: auto;
     }
-    .boiteOvale {
+    .checkBox {
         display: flex;
         width: auto;
         height: 2em;
@@ -871,13 +869,12 @@ footer a:hover {
         margin: 0 1em 0.8em 0;
         padding: 0 0.5em 0 0;
     }
-    .pastille__indicator :link {
+    .chipIndicator :link {
         background-color: #0065FC;
         color: white;
     }
-    .visually-hidden {
+    .visuallyHidden {
         border: 0;
-        clip: rect(0 0 0 0);
         height: 1px;
         margin: -1px;
         overflow: hidden;
@@ -885,47 +882,43 @@ footer a:hover {
         position: absolute;
         width: 1px;
     }
-    .pastille {
+    .chip {
         display: inline-flex;
         align-items: center;
-        margin-top: 0.25em;
+        margin-top: 0em;
     }
-    .pastille__indicator {
+    .chipIndicator {
         margin-right: .25rem;
         width: 2em;
         height: 2em;
         background-color: #DEEBFF;
         border-radius: 50%;
     }
-    .pastille .eco {
+    .chip .eco {
         background-image: url("images/logo/money-bill-wave-solid.svg");
         background-size: 60%;
         background-repeat: no-repeat;
         background-position: center;
-        fill: #0065FC;
     }
-    .pastille .famille {
+    .chip .family {
         background-image: url("images/logo/child-solid.svg");
         background-size: 50%;
         background-repeat: no-repeat;
         background-position: center;
-        fill: #0065FC;
     }
-    .pastille .romantique {
+    .chip .love {
         background-image: url("images/logo/heart-solid.svg");
         background-size: 60%;
         background-repeat: no-repeat;
         background-position: center;
-        fill: #0065FC;
     }
-    .pastille .animaux {
+    .chip .pets {
         background-image: url("images/logo/dog-solid.svg");
         background-size: 70%;
         background-repeat: no-repeat;
         background-position: center;
-        fill: #0065FC;
     }
-    .pastille__input:checked~.pastille__indicator {
+    .chipInput:checked~.chipIndicator {
         background-color: #0065FC;
         background-image: url("images/logo/check-circle-solid.svg");
         background-size: 85%;
@@ -933,16 +926,16 @@ footer a:hover {
         background-repeat: no-repeat;
         border: none;
     }
-    .pastille__input:checked+pastille:before {
+    .chipInput:checked+chip:before {
         background: #0065FC;
     }
-    .pastille__input:checked+pastille:after {
+    .chipInput:checked+chip:after {
         background: #DEEBFF;
         top: 2px;
         left: 140px;
     }
     /*  résultat recherche */
-    .iRond {
+    .info {
         margin-right: 10px;
         width: 25px;
         background: #f2f2f2;
@@ -953,7 +946,7 @@ footer a:hover {
         line-height: 0px;
         justify-content: center;
     }
-    .iRond p {
+    .info p {
         font-family: 'Courier New', Courier, monospace;
         font-weight: bolder;
         color: #0065FC;
@@ -968,7 +961,7 @@ footer a:hover {
         margin: auto;
     }
     /* Section 1 Hébergements */
-    .hebergements {
+    .twoSections {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -976,7 +969,7 @@ footer a:hover {
         width: auto;
         height: auto;
     }
-    .boiteHebergement {
+    .containerSectionOne {
         order: 2;
         display: flex;
         flex-direction: column;
@@ -988,10 +981,10 @@ footer a:hover {
         margin-right: 0em;
         width: auto;
     }
-    .titreSection {
+    .twoSections h2 {
         margin: 0.5em;
     }
-    #boiteSelection {
+    #cardContainer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1000,28 +993,27 @@ footer a:hover {
         width: auto;
         padding: 1em;
     }
-    .boiteHotel {
+    .cardPictureTop {
         height: 205px;
         width: auto;
         border-radius: 10px;
         box-shadow: 10px 10px 30px grey;
         overflow: hidden;
         /*pour que l'image soit bien dans le bloc*/
-        background-color: white;
         border: solid 3px white;
         margin: 0.5em 0 0.5em 0;
     }
-    /* rendre div hebergements, hebergement populaire et activité  clickables */
-    section article .boiteSelection .boiteHotel a,
-    aside .boiteHotelPopulaire .suggestionPopulaire a {
+    /* rendre div twoSections, hebergement populaire et activité  clickables */
+    section article #cardContainer .cardPictureTop a,
+    aside .containerBox .cardPictureSide a {
         display: block;
     }
-    .photoHotel {
+    .cardPictureTop img {
         width: 100%;
         height: 120px;
         object-fit: cover;
     }
-    .texteHotel {
+    .text {
         background-color: white;
         display: flex;
         justify-content: left;
@@ -1029,30 +1021,26 @@ footer a:hover {
         flex-wrap: wrap;
         height: 80px;
     }
-    .texteHotel h6 {
+    .text h6 {
         width: 100%;
     }
     h6 {
         font-size: large;
     }
-    .tarif {
+    .text div p,
+    .textSide div p {
         font-size: small;
-        margin: 3%
+        margin: 1%
     }
-    .afficherPlus {
-        margin: 0.5em;
-    }
-    .afficherPlus h5 {
+    .containerSectionOne h5 {
         font-size: medium;
+        margin: 0.5em;
         margin-top: 3px;
         padding: 0 1em;
     }
     /* Aside - Les plus populaires */
-    .hebergements aside {
+    .containerSectionTwo {
         order: 1;
-        width: auto;
-    }
-    .boitePopulaire {
         display: flex;
         background-color: #f2f2f2;
         width: auto;
@@ -1061,27 +1049,26 @@ footer a:hover {
         border-radius: 0px;
         padding: 0;
     }
-    .titrePopulaire {
+    .containerSectionTwoTitle {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        width: auto;
-        padding: 1em;
+        width: 95%;
+        padding: 0;
     }
     .pictoIncrease {
         text-decoration: none;
     }
-    .boiteHotelPopulaire div a {
+    .containerBox div a {
         width: auto;
     }
-    .suggestionPopulaire {
+    .cardPictureSide {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        background-color: white;
         border-radius: 10px;
         border: solid 3px white;
         overflow: hidden;
@@ -1089,20 +1076,20 @@ footer a:hover {
         width: auto;
         margin: 0.5em;
     }
-    .imagePopulaire {
+    .pictureSide {
         display: flex;
         width: 43%;
         height: 150px;
         object-fit: cover;
     }
-    .descriptionLogementPopulaire {
+    .textSide {
         display: flex;
         flex-direction: column;
         justify-content: right;
         width: 70%;
         padding-left: 0.8em;
     }
-    .photoHotelPop {
+    .pictureSide img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1117,7 +1104,7 @@ footer a:hover {
         margin: 0;
         padding: 1em;
     }
-    #selectionActivites {
+    #BoxesInStrip {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1125,7 +1112,7 @@ footer a:hover {
         height: auto;
         width: 100%;
     }
-    .grandeActivite {
+    .bigBox {
         border-radius: 10px;
         box-shadow: 10px 10px 30px grey;
         overflow: hidden;
@@ -1134,22 +1121,22 @@ footer a:hover {
         height: 200px;
         margin-bottom: 2em;
     }
-    .photoGrandeActivité {
+    .bigBox img {
         width: 100%;
         height: 145px;
     }
-    .photoPetiteActivité {
+    .littleBox img {
         width: 100%;
         height: 145px;
         object-fit: cover;
     }
-    .petiteActivite {
+    .boxOfTwo {
         flex-direction: column;
         width: 100%;
         justify-content: space-between;
         height: auto;
     }
-    .boitePetiteActivite {
+    .littleBox {
         border-radius: 10px;
         box-shadow: 10px 10px 30px grey;
         overflow: hidden;
@@ -1157,9 +1144,9 @@ footer a:hover {
         background-color: white;
         height: 200px;
     }
-    figcaption {
+    .figcaption {
         margin: 0.5em;
-        font: medium 0.5em;
+        font: medium;
         font-weight: 600;
         overflow: auto;
         justify-content: left;
